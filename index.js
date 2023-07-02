@@ -18,12 +18,12 @@ app.use(express.urlencoded({
   limit: '1mb',
 }));
 
-app.get('/test', async (req, res) => {
-  res.json({
-    test: "succesful",
-    createdAt: new Date().toUTCString()
-  })
-});
+// app.get('/test', async (req, res) => {
+//   res.json({
+//     test: "succesful",
+//     createdAt: new Date().toUTCString()
+//   })
+// });
 
 app.use("/api", router);
 
