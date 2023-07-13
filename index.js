@@ -1,4 +1,5 @@
 require("express-async-errors");
+const mongoose = require("mongoose");
 const express = require('express');
 const helmet = require('helmet');
 const RouterFns = require("./routes/index.js");
@@ -28,6 +29,12 @@ app.use(express.urlencoded({
 app.use("/api", router);
 
 const PORT = 5000;
+
+mongoose.connetc("redis://default:RP9D6YnygKzjzBsBnOyhMcQhN19VQ4J1@redis-14261.c135.eu-central-1-1.ec2.cloud.").then(()=>{
+  console.log("MONGODB CONNECTED");
+}).catch(err => {
+  console.log(err);
+})
 
 app.listen(PORT, ()=> {
   console.log(`Server is running on port ${PORT}`);
