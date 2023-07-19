@@ -1,0 +1,4 @@
+username: redis
+password: bndVUvKamzagYfrh
+
+mongodb+srv://redis:bndVUvKamzagYfrh@redis-edu.suqnh0q.mongodb.net/?retryWrites=true&w=majority
