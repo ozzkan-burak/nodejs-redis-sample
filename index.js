@@ -30,7 +30,7 @@ app.use("/api", router);
 
 const PORT = 5000;
 
-mongoose.connetc("redis://default:RP9D6YnygKzjzBsBnOyhMcQhN19VQ4J1@redis-14261.c135.eu-central-1-1.ec2.cloud.").then(()=>{
+mongoose.connect("mongodb+srv://redis:bndVUvKamzagYfrh@redis-edu.suqnh0q.mongodb.net/?retryWrites=true&w=majority").then(()=>{
   console.log("MONGODB CONNECTED");
 }).catch(err => {
   console.log(err);
