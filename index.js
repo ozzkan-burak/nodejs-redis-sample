@@ -6,6 +6,7 @@ const Models = require('./mongodb/index.js');
 
 const RouterFns = require("./routes/index.js");
 const app = express();
+require('dotenv').config();
 
 const router = express.Router();
 
@@ -31,12 +32,13 @@ app.use(express.urlencoded({
 app.use("/api", router);
 
 const PORT = 5000;
+console.log(process.env.MONGO_DB)
 
-mongoose.connect("mongodb+srv://redis:bndVUvKamzagYfrh@redis-edu.suqnh0q.mongodb.net/redis?retryWrites=true&w=majority").then(()=>{
-  console.log("MONGODB CONNECTED");
-}).catch(err => {
-  console.log(err);
-})
+// mongoose.connect(process.env.MONGO_DB).then(()=>{
+//   console.log("MONGODB CONNECTED");
+// }).catch(err => {
+//   console.log(err);
+// })
 
 app.listen(PORT, ()=> {
   console.log(`Server is running on port ${PORT}`);

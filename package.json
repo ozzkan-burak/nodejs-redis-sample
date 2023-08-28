@@ -21,6 +21,7 @@
   "homepage": "https://github.com/ozzkan-burak/nodejs-redis-sample#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
     "helmet": "^7.0.0",
