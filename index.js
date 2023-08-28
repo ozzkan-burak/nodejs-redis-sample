@@ -2,6 +2,8 @@ require("express-async-errors");
 const mongoose = require("mongoose");
 const express = require('express');
 const helmet = require('helmet');
+const Models = require('./mongodb/index.js');
+
 const RouterFns = require("./routes/index.js");
 const app = express();
 
