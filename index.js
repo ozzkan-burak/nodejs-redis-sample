@@ -32,13 +32,13 @@ app.use(express.urlencoded({
 app.use("/api", router);
 
 const PORT = 5000;
-console.log(process.env.MONGO_DB)
 
-// mongoose.connect(process.env.MONGO_DB).then(()=>{
-//   console.log("MONGODB CONNECTED");
-// }).catch(err => {
-//   console.log(err);
-// })
+
+mongoose.connect(`mongodb+srv://${process.env.MONGO_DB}`).then(()=>{
+  console.log("MONGODB CONNECTED");
+}).catch(err => {
+  console.log(err);
+})
 
 app.listen(PORT, ()=> {
   console.log(`Server is running on port ${PORT}`);
